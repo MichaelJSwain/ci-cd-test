@@ -15,6 +15,8 @@ function App() {
       <h1>CI / CD Test</h1>
       <p>This is a practise project to learn about CI / CD pipelines</p>
 
+      <button>Add item</button>
+      
       {listItems.map(item => {
         return <div key={item.id}>{item.name}</div>
       })}
