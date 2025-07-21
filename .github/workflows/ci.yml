@@ -44,11 +44,10 @@ jobs:
       - uses: actions/checkout@v3
         name: Check out code
 
-      - uses: mr-smithers-excellent/docker-build-push@v6
+      - uses: mr-smithers-excellent/docker-build-push@v4
         name: Build & push Docker image
         with:
           image: mikeyswain/demo-app
           registry: docker.io
-          dockerfile: Dockerfile.ci
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
