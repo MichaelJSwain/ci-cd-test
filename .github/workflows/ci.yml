@@ -10,6 +10,20 @@ on:
   workflow_dispatch:
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: checkout code
+
+      - name: install dependencies
+        run: npm install
+        shell: bash
+
+      - name: run build
+        run: npm run build
+        shell: bash
+
   run-tests:
     runs-on: ubuntu-latest
     steps:
