@@ -7,9 +7,9 @@ function App() {
 
   const handleAddItem = () => {
     setListItems(prevItems => {
-      const id = Math.random() * 10000;
+      const id = listItems.length + 1;
       const newItem = { id: id, name: `Item ${id}`};
-      const updatedItems = {...prevItems, newItem};
+      const updatedItems = [...prevItems, newItem];
       return updatedItems;
     })
   }
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div>
-      <h1>CI / CD Test 2</h1>
+      <h1>CI / CD Test 3</h1>
       <p>This is a practise project to learn about CI / CD pipelines</p>
 
       <button onClick={handleAddItem}>+ Add item</button>
